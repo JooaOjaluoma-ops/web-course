@@ -1,1 +1,53 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kysy meiltä | Mäkelän Tilapuoti</title>
+</head>
+<body>
+  <header>
+    <p>*Mäkelän Tilapuoti*</p>
+    <nav>
+      <a href="index.html">Etusivu</a>
+      <a href="tuotteet.html">Tuotteet</a>
+      <a href="aukioloajat.html">Aukioloajat ja sijainti</a>
+      <a href="yhteystiedot.html">Kysy meiltä</a>
+    </nav>
+  </header>
+  <main>
+    <h1>Kysy meiltä</h1>
+    <p>Voit kysyä esimerkiksi, onko jokin tuote saatavilla tai milloin isommat tilauksen voi hakea. Kaikkiin kenttiin pitää vastata.</p>
 
+    <p id="valmis" role="status" hidden>Viestisi on valmis. Kiitos yhteydenotosta!</p>
+
+    <form id="lomake">
+      <p>
+        <label for="nimi">Nimi</label><br>
+        <input type="text" id="nimi" name="nimi" required>
+      </p>
+      <p>
+        <label for="sahkoposti">Sähköpostiosoite</label><br>
+        <input type="email" id="sahkoposti" name="sahkoposti" required>
+      </p>
+      <p>
+        <label for="viesti">Kysyttävä asia</label><br>
+        <textarea id="viesti" name="viesti" rows="6" cols="40" minlength="10" required></textarea>
+      </p>
+      <button type="submit">Lähetä kysymys</button>
+    </form>
+
+    <script>
+      document.getElementById("lomake").addEventListener("submit", function (e) {
+        e.preventDefault();
+        document.getElementById("valmis").hidden = false;
+        this.reset();
+      });
+    </script>
+  </main>
+  <footer>
+    <p>Mäkelän Tilapuoti, Kurikantie, Ilmajoki</p>
+    <p>Tekijä: Jooa Ojaluoma</p>
+  </footer>
+</body>
+</html>
