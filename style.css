@@ -1,1 +1,96 @@
+:root {
+  --text: #301934;
+  --bg: #f8f5fa;
+  --accent: #c9971a;
+  --font: Verdana, system-ui, sans-serif;
+  --space: 1rem;
+  --radius: 0.75rem;
+}
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: #f8f5fa;
+    --bg: #241029;
+  }
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  color: var(--text);
+  background: var(--bg);
+}
+
+h1, h2 { line-height: 1.2; }
+
+a { color: var(--text); font-weight: bold; }
+a:hover { text-decoration-thickness: 0.25em; text-decoration-color: var(--accent); }
+:focus-visible { outline: 3px solid var(--text); outline-offset: 3px; }
+
+header, footer { background: var(--text); color: var(--bg); padding: var(--space); }
+header { border-bottom: 6px solid var(--accent); }
+footer { border-top: 6px solid var(--accent); }
+header :focus-visible { outline-color: var(--bg); }
+.logo { margin: 0 0 0.5rem; font-size: 1.5rem; font-weight: bold; }
+
+nav { display: flex; flex-wrap: wrap; gap: 0 var(--space); }
+nav a {
+  color: var(--bg);
+  text-decoration: none;
+  padding: 0.5rem 0.25rem;
+  border-bottom: 4px solid transparent;
+}
+nav a:hover, nav a[aria-current] { border-color: var(--accent); }
+
+main { max-width: 65ch; margin: 0 auto; padding: 2rem var(--space); }
+
+article {
+  border: 2px solid var(--text);
+  border-left: 8px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--space);
+  margin-bottom: var(--space);
+}
+
+label { display: block; font-weight: bold; margin-bottom: 0.5rem; }
+
+input, textarea {
+  width: 100%;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg);
+  border: 2px solid var(--text);
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+}
+
+button {
+  font: inherit;
+  font-weight: bold;
+  color: var(--bg);
+  background: var(--text);
+  border: 3px solid var(--accent);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+}
+
+{
+  font-weight: bold;
+  border: 2px solid var(--text);
+  border-left: 8px solid var(--accent);
+  border-radius: var(--radius);
+  padding: var(--space);
+}
+
+@media (min-width: 48rem) {
+  header { display: flex; justify-content: space-between; align-items: center; }
+  .logo { margin: 0; }
+  main { max-width: 60rem; display: grid; grid-template-columns: 1fr 1fr; gap: var(--space); align-items: start; }
+  main > h1, main > p, .laaja { grid-column: 1 / -1; }
+  article { margin-bottom: 0; }
+}
