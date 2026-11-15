@@ -5,6 +5,7 @@ Claude (Anthropic)
 - Kysymyksiä Github pages käyttämisestä.
 - Hain tarvittavaa apua kaikkien neljän HTML sivun kanssa.
 - Kysyin miten "tägätä" commit
+- Miten tehdä hyvää CSS nettisivustolle.
 
 # Mitä tein itse
 - Valitsin asiakkaan (36, Mäkelän Tilapuoti)
