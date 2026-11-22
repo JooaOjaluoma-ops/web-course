@@ -18,14 +18,19 @@
   </header>
   <main>
     <h1>Tuotteet</h1>
-    
+
+    <label for="haku">Hae tuotetta</label>
+    <input type="search" id="haku">
+
+    <label for="lajittelu">Lajittele</label>
+    <select id="lajittelu">
+      <option value="nimi">Nimi</option>
+      <option value="hinta">Hinta</option>
+    </select>
+      
     <h2>Tilan tuotteet</h2>
-    <ul>
-      <li>Perunat</li>
-      <li>Vihannekset</li>
-      <li>Kananmunat</li>
-      <li>Marjat</li>
-    </ul>
+    <p id="tila" aria-live="polite"></p>
+    <ul id="lista"></ul>
 
     <h2>Naapuritilojen tuotteet</h2>
     <p>Valikoimasta löytyy myös muutamia naapuritilojen tuotteita.</p>
@@ -38,5 +43,6 @@
     <p>Mäkelän Tilapuoti, Kurikantie, Ilmajoki</p>
     <p>Tekijä: Jooa Ojaluoma</p>
   </footer>
+  <script src="listing.js" defer></script>
 </body>
 </html>
