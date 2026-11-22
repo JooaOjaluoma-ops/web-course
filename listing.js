@@ -23,11 +23,11 @@ function nayta() {
   lista.innerHTML = "";
   tulos.forEach(t => {
     const li = document.createElement("li");
-    li.textContent = `${t.nimi}, ${t.hinta} €, ${t.varasto > 0 ? "varastossa" : "loppu"}`;
+    li.textContent = t.nimi + "," + t.hinta + "€, " + {t.varasto > 0 ? "varastossa" : "loppu"};
     lista.appendChild(li);
   });
 
-  tila.textContent = `Näytetään ${tulos.length} / ${tuotteet.length} tuotetta`;
+  tila.textContent = "Näytetään" + tulos.length + "/" + tuotteet.length + "tuotetta";
 }
 
 haku.addEventListener("input", nayta);
