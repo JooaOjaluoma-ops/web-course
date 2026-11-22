@@ -1,8 +1,9 @@
 const tuotteet = [
-  { nimi: "Peruna", hinta: 2.5, varasto: 20 },
-  { nimi: "Vihannes", hinta: 3, varasto: 0 },
-  { nimi: "Kananmuna", hinta: 4, varasto: 12 },
-  { nimi: "Mansikka", hinta: 6, varasto: 5 }
+  { nimi: "Perunat", hinta: 2.5, varasto: 20 },
+  { nimi: "Juurekset", hinta: 3, varasto: 10 },
+  { nimi: "Kaali", hinta: 2, varasto: 0 },
+  { nimi: "Kananmunat", hinta: 4, varasto: 11 },
+  { nimi: "Marjat", hinta: 6, varasto: 6 }
 ];
 
 const haku = document.getElementById("haku");
