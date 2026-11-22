@@ -12,6 +12,10 @@ Selke채t ja helppolukuiset kotisivut. Vanhempien ihmisten pit채isi n채hd채, mit�
 * about.html: aukioloajat ja sijainti
 * listing.html: tuotteet ja sesonki
 * contact.html: kysymyslomake
+* ai-log.md
+* listin.js
+* plan.md (t채m채)
+* style.css
 
 ## V채rit
 Teksti #301934, tausta #f8f5fa, korostus #c9971a
