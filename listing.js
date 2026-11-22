@@ -16,7 +16,7 @@ function nayta() {
   const tulos = tuotteet
     .filter(t => t.nimi.toLowerCase().includes(teksti)
     .sort((a, b) =>
-      lajittelu.value === "hinta" ? a.hinta - b.hinta : a.nimi.localCompare(b.nimi)
+      lajittelu.value === "hinta" ? a.hinta - b.hinta : a.nimi.localeCompare(b.nimi)
     );
 
   lista.innerHTML = "";
