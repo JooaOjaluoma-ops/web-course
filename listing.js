@@ -1,4 +1,3 @@
-console.log("toimii");
 const tuotteet = [
   { nimi: "Peruna", hinta: 2.5, varasto: 20 },
   { nimi: "Vihannes", hinta: 3, varasto: 0 },
