@@ -1,0 +1,34 @@
+const tuotteet = [
+  {nimi: "Peruna", hinta: 2.5, varasto: 20},
+  {nimi: "Vihannes", hinta: 3, varasto: 0},
+  {nimi: "Kananmuna", hinta: 4, varasto: 12},
+  {nimi: "Mansikka", hinta: 6, varasto: 5}
+];
+
+const haku = document.getElementById("haku");
+const lajittelu = document.getElementById("lajittelu");
+const lista = document.getElementById("Lista");
+const tila = document.getElementById("tila");
+
+function nayta() {
+  const teksti = haku.value.toLowerCase();
+
+  const tulos = tuotteet
+    .filter(t => t.nimi.toLowerCase().includes(teksti)
+    .sort((a, b) =>
+      lajittelu.value === "hinta" ? a.hinta - b.hinta : a.nimi.LocalCompare(b.nimi)
+    );
+
+  lista.innerHTML = "";
+  tulos.forEach(t => {
+    const li = document.createElement("li");
+    li.textContent = `${t.nimi}, ${t.hinta} €, ${t.varasto > 0 ? "varastossa" : "loppu"}`;
+    lista.appendChild(li);
+  });
+
+  tila.textContent = `Näytetään ${tulos.length} / ${tuotteet.length} tuotetta`;
+}
+
+haku.addEventListener("input", nayta);
+lajittelu.addEventListener("change", nayta);
+nayta();
