@@ -7,7 +7,7 @@ const tuotteet = [
 
 const haku = document.getElementById("haku");
 const lajittelu = document.getElementById("lajittelu");
-const lista = document.getElementById("Lista");
+const lista = document.getElementById("lista");
 const tila = document.getElementById("tila");
 
 function nayta() {
@@ -16,7 +16,7 @@ function nayta() {
   const tulos = tuotteet
     .filter(t => t.nimi.toLowerCase().includes(teksti)
     .sort((a, b) =>
-      lajittelu.value === "hinta" ? a.hinta - b.hinta : a.nimi.LocalCompare(b.nimi)
+      lajittelu.value === "hinta" ? a.hinta - b.hinta : a.nimi.localCompare(b.nimi)
     );
 
   lista.innerHTML = "";
